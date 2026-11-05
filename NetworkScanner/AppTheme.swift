@@ -48,3 +48,36 @@ struct SectionTitle: View {
             .foregroundStyle(LinearGradient(colors: [.cyan, .blue], startPoint: .leading, endPoint: .trailing))
     }
 }
+
+struct SiteFooter: View {
+    var body: some View {
+        VStack(spacing: 6) {
+            Text("Створено mrVanich")
+                .font(.caption2)
+                .foregroundColor(.white.opacity(0.45))
+            if let url = URL(string: "https://vanich.cv.ua") {
+                Link(destination: url) {
+                    Label("vanich.cv.ua", systemImage: "link")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundColor(.cyan)
+                        .padding(.horizontal, 14).padding(.vertical, 8)
+                        .background(Capsule().fill(Color.white.opacity(0.08)))
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, 12)
+    }
+}
+
+struct Chip: View {
+    let text: String
+    let color: Color
+    var body: some View {
+        Text(text)
+            .font(.caption2.weight(.semibold))
+            .padding(.horizontal, 8).padding(.vertical, 3)
+            .background(Capsule().fill(color.opacity(0.22)))
+            .foregroundColor(color)
+    }
+}

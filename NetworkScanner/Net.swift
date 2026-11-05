@@ -141,3 +141,59 @@ enum HTTP {
         return t.isEmpty ? nil : String(t.prefix(60))
     }
 }
+
+// MARK: - POST (для ONVIF/SOAP)
+extension Net {
+    static func httpPost(ip: UInt32, port: UInt16, path: String, body: String,
+                         contentType: String, timeout: TimeInterval = 2.5) async -> String? {
+        await withCheckedContinuation { (cont: CheckedContinuation<String?, Never>) in
+            guard let nwPort = NWEndpoint.Port(rawValue: port) else {
+                cont.resume(returning: nil)
+                return
+            }
+            let host = IPv4.string(ip)
+            let conn = NWConnection(host: NWEndpoint.Host(host), port: nwPort, using: .tcp)
+            let once = Once()
+            let box = DataBox()
+            let bodyData = Data(body.utf8)
+
+            let finish: @Sendable () -> Void = {
+                once.fire {
+                    conn.cancel()
+                    let text = String(decoding: box.snapshot, as: UTF8.self)
+                    cont.resume(returning: text.hasPrefix("HTTP/") ? text : nil)
+                }
+            }
+
+            @Sendable func receiveLoop() {
+                conn.receive(minimumIncompleteLength: 1, maximumLength: 8192) { data, _, isComplete, error in
+                    if let data, !data.isEmpty { box.append(data) }
+                    if isComplete || error != nil || box.count >= 32768 {
+                        finish()
+                    } else {
+                        receiveLoop()
+                    }
+                }
+            }
+
+            conn.stateUpdateHandler = { state in
+                switch state {
+                case .ready:
+                    let head = "POST \(path) HTTP/1.0\r\nHost: \(host)\r\nContent-Type: \(contentType)\r\nContent-Length: \(bodyData.count)\r\nConnection: close\r\n\r\n"
+                    var packet = Data(head.utf8)
+                    packet.append(bodyData)
+                    conn.send(content: packet, completion: .contentProcessed({ _ in }))
+                    receiveLoop()
+                case .failed:
+                    finish()
+                case .waiting(let err):
+                    if case .posix(let code) = err, closedCodes.contains(code) { finish() }
+                default:
+                    break
+                }
+            }
+            conn.start(queue: queue)
+            queue.asyncAfter(deadline: .now() + timeout) { finish() }
+        }
+    }
+}

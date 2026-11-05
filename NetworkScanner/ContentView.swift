@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var scanner = NetworkScanner()
+    @EnvironmentObject private var scanner: NetworkScanner
     @State private var filter: Filter = .all
     @State private var sweep: Double = 0
     @Environment(\.openURL) private var openURL
@@ -52,6 +52,7 @@ struct ContentView: View {
                         }
                         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: visible)
                     }
+                    SiteFooter()
                     Color.clear.frame(height: 90)
                 }
                 .padding(.horizontal, 16)
@@ -86,8 +87,10 @@ struct ContentView: View {
 
     private var header: some View {
         VStack(spacing: 6) {
-            Text("Network Scanner")
+            Text("mrVanich Network Scanner")
                 .font(.system(size: 30, weight: .heavy, design: .rounded))
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
                 .foregroundStyle(LinearGradient(colors: [.cyan, .blue, .purple],
                                                 startPoint: .leading, endPoint: .trailing))
             if let net = scanner.network {
@@ -208,7 +211,7 @@ private struct StatTile: View {
 
 // MARK: - Картка пристрою
 
-private struct DeviceCard: View {
+struct DeviceCard: View {
     let device: NetworkDevice
 
     var body: some View {
@@ -260,7 +263,7 @@ private struct DeviceCard: View {
     }
 }
 
-private extension DeviceKind {
+extension DeviceKind {
     var symbol: String {
         switch self {
         case .hikvision, .dahua, .camera: return "video.fill"

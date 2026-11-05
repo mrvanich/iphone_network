@@ -44,6 +44,7 @@ final class NetworkScanner: ObservableObject {
     /// Порти, за якими розпізнаємо камери: HTTP, HTTPS, RTSP, Hikvision SDK, alt-HTTP, ONVIF, Dahua.
     private static let ports: [UInt16] = [80, 443, 554, 8000, 8080, 8899, 37777]
     private var task: Task<Void, Never>?
+    var onFinished: (@MainActor ([NetworkDevice], String) -> Void)?
 
     func start() {
         guard !isScanning else { return }
@@ -110,6 +111,7 @@ final class NetworkScanner: ObservableObject {
 
         progress = 1
         phase = Task.isCancelled ? "Зупинено" : "Готово: знайдено \(devices.count)"
+        if !Task.isCancelled && !devices.isEmpty { onFinished?(devices, net.cidr) }
         isScanning = false
     }
 

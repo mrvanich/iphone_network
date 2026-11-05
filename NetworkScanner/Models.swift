@@ -1,12 +1,12 @@
 import Foundation
 
-enum DeviceKind: Int {
+enum DeviceKind: Int, Codable {
     case hikvision, dahua, camera, other
 
     var isCamera: Bool { self != .other }
 }
 
-struct NetworkDevice: Identifiable, Hashable {
+struct NetworkDevice: Identifiable, Hashable, Codable {
     var id: UInt32 { ipValue }
     let ipValue: UInt32
     var ip: String { IPv4.string(ipValue) }
