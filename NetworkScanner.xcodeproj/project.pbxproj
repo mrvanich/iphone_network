@@ -7,28 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000000000000000000000019 /* ARPTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000010 /* ARPTable.swift */; };
-		00000000000000000000001A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* ContentView.swift */; };
-		00000000000000000000001B /* Fingerprinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000012 /* Fingerprinter.swift */; };
-		00000000000000000000001C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000013 /* Models.swift */; };
-		00000000000000000000001D /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000014 /* Net.swift */; };
-		00000000000000000000001E /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000015 /* NetworkInfo.swift */; };
-		00000000000000000000001F /* NetworkScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000016 /* NetworkScanner.swift */; };
-		000000000000000000000020 /* NetworkScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000017 /* NetworkScannerApp.swift */; };
-		000000000000000000000021 /* OUIDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000018 /* OUIDatabase.swift */; };
+		000000000000000000000020 /* ARPTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000010 /* ARPTable.swift */; };
+		000000000000000000000021 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* AppTheme.swift */; };
+		000000000000000000000022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000012 /* ContentView.swift */; };
+		000000000000000000000023 /* ExternalIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000013 /* ExternalIP.swift */; };
+		000000000000000000000024 /* ExternalIPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000014 /* ExternalIPView.swift */; };
+		000000000000000000000025 /* Fingerprinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000015 /* Fingerprinter.swift */; };
+		000000000000000000000026 /* Gateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000016 /* Gateway.swift */; };
+		000000000000000000000027 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000017 /* Models.swift */; };
+		000000000000000000000028 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000018 /* Net.swift */; };
+		000000000000000000000029 /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000019 /* NetworkInfo.swift */; };
+		00000000000000000000002A /* NetworkInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001A /* NetworkInfoView.swift */; };
+		00000000000000000000002B /* NetworkScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001B /* NetworkScanner.swift */; };
+		00000000000000000000002C /* NetworkScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001C /* NetworkScannerApp.swift */; };
+		00000000000000000000002D /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001D /* NetworkStatus.swift */; };
+		00000000000000000000002E /* OUIDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001E /* OUIDatabase.swift */; };
+		00000000000000000000002F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001F /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000000000000000000000009 /* NetworkScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000000000000000000000010 /* ARPTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPTable.swift; sourceTree = "<group>"; };
-		000000000000000000000011 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		000000000000000000000012 /* Fingerprinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fingerprinter.swift; sourceTree = "<group>"; };
-		000000000000000000000013 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		000000000000000000000014 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
-		000000000000000000000015 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
-		000000000000000000000016 /* NetworkScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScanner.swift; sourceTree = "<group>"; };
-		000000000000000000000017 /* NetworkScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScannerApp.swift; sourceTree = "<group>"; };
-		000000000000000000000018 /* OUIDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUIDatabase.swift; sourceTree = "<group>"; };
+		000000000000000000000011 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		000000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		000000000000000000000013 /* ExternalIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalIP.swift; sourceTree = "<group>"; };
+		000000000000000000000014 /* ExternalIPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalIPView.swift; sourceTree = "<group>"; };
+		000000000000000000000015 /* Fingerprinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fingerprinter.swift; sourceTree = "<group>"; };
+		000000000000000000000016 /* Gateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gateway.swift; sourceTree = "<group>"; };
+		000000000000000000000017 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		000000000000000000000018 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		000000000000000000000019 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		00000000000000000000001A /* NetworkInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfoView.swift; sourceTree = "<group>"; };
+		00000000000000000000001B /* NetworkScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScanner.swift; sourceTree = "<group>"; };
+		00000000000000000000001C /* NetworkScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScannerApp.swift; sourceTree = "<group>"; };
+		00000000000000000000001D /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		00000000000000000000001E /* OUIDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUIDatabase.swift; sourceTree = "<group>"; };
+		00000000000000000000001F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,21 @@
 			isa = PBXGroup;
 			children = (
 				000000000000000000000010 /* ARPTable.swift */,
-				000000000000000000000011 /* ContentView.swift */,
-				000000000000000000000012 /* Fingerprinter.swift */,
-				000000000000000000000013 /* Models.swift */,
-				000000000000000000000014 /* Net.swift */,
-				000000000000000000000015 /* NetworkInfo.swift */,
-				000000000000000000000016 /* NetworkScanner.swift */,
-				000000000000000000000017 /* NetworkScannerApp.swift */,
-				000000000000000000000018 /* OUIDatabase.swift */,
+				000000000000000000000011 /* AppTheme.swift */,
+				000000000000000000000012 /* ContentView.swift */,
+				000000000000000000000013 /* ExternalIP.swift */,
+				000000000000000000000014 /* ExternalIPView.swift */,
+				000000000000000000000015 /* Fingerprinter.swift */,
+				000000000000000000000016 /* Gateway.swift */,
+				000000000000000000000017 /* Models.swift */,
+				000000000000000000000018 /* Net.swift */,
+				000000000000000000000019 /* NetworkInfo.swift */,
+				00000000000000000000001A /* NetworkInfoView.swift */,
+				00000000000000000000001B /* NetworkScanner.swift */,
+				00000000000000000000001C /* NetworkScannerApp.swift */,
+				00000000000000000000001D /* NetworkStatus.swift */,
+				00000000000000000000001E /* OUIDatabase.swift */,
+				00000000000000000000001F /* RootView.swift */,
 			);
 			path = NetworkScanner;
 			sourceTree = "<group>";
@@ -142,15 +163,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000000000000000019 /* ARPTable.swift in Sources */,
-				00000000000000000000001A /* ContentView.swift in Sources */,
-				00000000000000000000001B /* Fingerprinter.swift in Sources */,
-				00000000000000000000001C /* Models.swift in Sources */,
-				00000000000000000000001D /* Net.swift in Sources */,
-				00000000000000000000001E /* NetworkInfo.swift in Sources */,
-				00000000000000000000001F /* NetworkScanner.swift in Sources */,
-				000000000000000000000020 /* NetworkScannerApp.swift in Sources */,
-				000000000000000000000021 /* OUIDatabase.swift in Sources */,
+				000000000000000000000020 /* ARPTable.swift in Sources */,
+				000000000000000000000021 /* AppTheme.swift in Sources */,
+				000000000000000000000022 /* ContentView.swift in Sources */,
+				000000000000000000000023 /* ExternalIP.swift in Sources */,
+				000000000000000000000024 /* ExternalIPView.swift in Sources */,
+				000000000000000000000025 /* Fingerprinter.swift in Sources */,
+				000000000000000000000026 /* Gateway.swift in Sources */,
+				000000000000000000000027 /* Models.swift in Sources */,
+				000000000000000000000028 /* Net.swift in Sources */,
+				000000000000000000000029 /* NetworkInfo.swift in Sources */,
+				00000000000000000000002A /* NetworkInfoView.swift in Sources */,
+				00000000000000000000002B /* NetworkScanner.swift in Sources */,
+				00000000000000000000002C /* NetworkScannerApp.swift in Sources */,
+				00000000000000000000002D /* NetworkStatus.swift in Sources */,
+				00000000000000000000002E /* OUIDatabase.swift in Sources */,
+				00000000000000000000002F /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,12 +229,10 @@
 		00000000000000000000000E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "mrVanich Network Scanner";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_CFBundleDisplayName = "Network Scanner";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Застосунок шукає камери Hikvision, Dahua та інші пристрої у вашій Wi-Fi мережі.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -226,12 +252,11 @@
 		00000000000000000000000F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU79VBYDTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "mrVanich Network Scanner";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_CFBundleDisplayName = "Network Scanner";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Застосунок шукає камери Hikvision, Dahua та інші пристрої у вашій Wi-Fi мережі.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

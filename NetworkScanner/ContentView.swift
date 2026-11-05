@@ -38,13 +38,13 @@ struct ContentView: View {
                                         if let url = URL(string: "http://\(device.ip)") { openURL(url) }
                                     }
                                     .contextMenu {
-                                        Button("Копіювати IP", systemImage: "doc.on.doc") {
+                                        Button {
                                             UIPasteboard.general.string = device.ip
-                                        }
+                                        } label: { Label("Копіювати IP", systemImage: "doc.on.doc") }
                                         if let mac = device.mac {
-                                            Button("Копіювати MAC", systemImage: "number") {
+                                            Button {
                                                 UIPasteboard.general.string = mac
-                                            }
+                                            } label: { Label("Копіювати MAC", systemImage: "number") }
                                         }
                                     }
                                     .transition(.scale.combined(with: .opacity))
@@ -62,7 +62,7 @@ struct ContentView: View {
                 scanButton
             }
         }
-        .preferredColorScheme(.dark)
+        .onAppear { scanner.loadNetwork() }
         .onChange(of: scanner.isScanning) { scanning in
             if scanning {
                 sweep = 0

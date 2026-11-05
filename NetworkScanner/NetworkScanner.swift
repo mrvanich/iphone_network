@@ -59,6 +59,10 @@ final class NetworkScanner: ObservableObject {
         task = Task { await run(net) }
     }
 
+    func loadNetwork() {
+        if !isScanning { network = LocalNetwork.current() }
+    }
+
     func stop() {
         task?.cancel()
     }

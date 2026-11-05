@@ -4,7 +4,7 @@ import SwiftUI
 struct NetworkScannerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
