@@ -1,0 +1,27 @@
+name: NetworkScanner
+options:
+  bundleIdPrefix: dev.mrvanich
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+targets:
+  NetworkScanner:
+    type: application
+    platform: iOS
+    sources:
+      - NetworkScanner
+    info:
+      path: NetworkScanner/Info.plist
+      properties:
+        CFBundleDisplayName: Network Scanner
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSLocalNetworkUsageDescription: "Застосунок шукає камери Hikvision, Dahua та інші пристрої у вашій Wi-Fi мережі."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.mrvanich.networkscanner
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
